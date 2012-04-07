@@ -1,0 +1,43 @@
+PHPUnit-Mink framework designed to use combination of PHPUnit, Mink and Page Object Pattern to write functional tests with various browser emulators like Goutte, Selenium, Sahi and WebDriver. PHPUnit-Mink Framework has used Mink and PHPUnit to write tests. Driver support for Selenium, Sahi, WebDriver for browser emulation. Test Report Generation which can plugged in Continuous Integration server. Page Objects which can be used directly in tests. Abstracted common elements up in the framework in order to make it maintainable.
+
+How to use:
+
+Clone GitHub Repository
+
+  $git clone git@github.com:Shashi-ibuildings/PHPUnit-Mink.git
+  $cd PHPUnit-Mink
+
+Start your Driver
+
+Sahi Driver :
+
+Download sahi zip file from SourceForge
+
+Now launch Sahi Server using command below:
+
+      $ cd /path/to/sahi
+
+      $ cd userdata/bin
+
+      $./start_sahi.sh
+
+Selenium Driver:
+
+You need to download selenium server jar file and execute following command:
+
+      $ cd /path/to/selenium-server
+
+      $java -jar selenium-server-standalone-2.20.0.jar
+
+In this tutorial, we are using sahi driver.
+Now run tests using ANT
+
+      $ant Mink
+
+Directory structure of framework
+
+    conf : YAML files can be used with Behat
+    core : Abstracted common elements/ methods
+    Page : Page objects (reusable Methods for page)
+    report: Generate Junit, Agile doc reports
+    tests:  PHPUnit tests using Mink Api's
