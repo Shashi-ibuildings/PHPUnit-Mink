@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="." tests="4" assertions="4" failures="0" errors="0" time="41.250565">
+    <testsuite name="navigationTest" file="/Users/sjagtap/PHPUnit-Mink/tests/navigationTest.php" tests="1" assertions="1" failures="0" errors="0" time="16.506166">
+      <testcase name="testTopNavigationWithPageObjects" class="navigationTest" file="/Users/sjagtap/PHPUnit-Mink/tests/navigationTest.php" line="20" assertions="1" time="16.506166"/>
+    </testsuite>
+    <testsuite name="wikiSearchTest" file="/Users/sjagtap/PHPUnit-Mink/tests/wikiSearchTest.php" tests="3" assertions="3" failures="0" errors="0" time="24.744399">
+      <testsuite name="wikiSearchTest::testwikiSearchMultiple" tests="2" assertions="2" failures="0" errors="0" time="16.589635">
+        <testcase name="testwikiSearchMultiple with data set #0" assertions="1" time="9.868075"/>
+        <testcase name="testwikiSearchMultiple with data set #1" assertions="1" time="6.721560"/>
+      </testsuite>
+      <testcase name="testwikiSearchsingle" class="wikiSearchTest" file="/Users/sjagtap/PHPUnit-Mink/tests/wikiSearchTest.php" line="22" assertions="1" time="8.154764"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

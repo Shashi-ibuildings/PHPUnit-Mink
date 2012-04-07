@@ -1,0 +1,29 @@
+<project name="PHPUnit-Mink" default="build" basedir=".">
+   <target name="build" depends="Mink" />
+   
+   <delete dir="${basedir}/report" />
+   <mkdir dir="${basedir}/report"/>
+   <!--delete dir="${basedir}/config/report" />
+   <mkdir dir="${basedir}/config/report"/-->
+   
+   <target name="Mink">
+    <exec dir="${basedir}" executable="phpunit" failonerror="true">
+     <arg line="--log-junit ${basedir}/report/TESTS-TestSuites.xml"/>
+     <arg line="--colors"/>
+     <arg line="--testdox-html ${basedir}/report/agiledoc.html"/>
+     <arg line="."/>
+    </exec>
+   </target>
+   
+   <target name="create-test-report for Mink and PHPUnit"  
+          description="Generate reports for executed Mink Tests.">  
+       <mkdir dir="report" />  
+       <junitreport todir="./report">  
+          <fileset dir="${basedir}/report">  
+             <include name="TEST-*.xml"/>  
+          </fileset>  
+          <report format="frames" todir="./report/html"/>  
+       </junitreport>  
+   </target>  
+   
+</project>

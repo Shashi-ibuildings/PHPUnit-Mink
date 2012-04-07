@@ -1,0 +1,19 @@
+default:
+  context:
+    parameters:
+      javascript_session: selenium
+      base_url:           http://en.wikipedia.org/wiki/Main_Page
+      selenium:
+        host: ondemand.saucelabs.com
+        port: 80
+      browser: >
+          {
+            "username":         "UserName",
+            "access-key":       "API-Key",
+            "browser":          "firefox",
+            "browser-version":  "7",
+            "os":               "Windows 2003",
+            "name":             "Testing Selenium with Behat"
+          }
+          
+       
